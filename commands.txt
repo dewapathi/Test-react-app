@@ -1,0 +1,14 @@
+npx create-react-app testreactapp
+npm run start
+npm i react-router-dom 
+npm i mui
+npm i @mui/material
+npm i @emotion/react
+npm i @emotion/styled
+npm install axios
+npm run build
+
+
+//with git
+git init\
+git add .
