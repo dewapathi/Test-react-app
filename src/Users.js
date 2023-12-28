@@ -16,6 +16,7 @@ const Users = () => {
 
     const getUsers = () => {
         Axios.get(process.env.REACT_APP_ENDPOINT + '/api/users').then(response => {
+            console.log('2222222');
             setUsers(response.data?.response || []);
         }).catch(error => {
             console.log("Axios Error : ", error);
