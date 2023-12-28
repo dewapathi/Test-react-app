@@ -12,3 +12,22 @@ npm run build
 //with git
 git init\
 git add .
+
+
+//with aws
+ssh -i "Test-react-app.pem" ubuntu@ec2-3-106-226-9.ap-southeast-2.compute.amazonaws.com
+sudo apt
+sudo apt install git
+sudo apt install nodejs
+sudo apt install npm
+sudo npm i n -g
+sudo n stable
+sudo git clone repo######
+sudo npm i
+sudo npm i nodemon
+node .
+sudo vim server.js
+sudo npm i pm2 -g
+sudo pm2 start . --name back-end
+
+

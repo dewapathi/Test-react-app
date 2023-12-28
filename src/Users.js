@@ -15,7 +15,7 @@ const Users = () => {
     }, []);
 
     const getUsers = () => {
-        Axios.get('http://localhost:3001/api/users').then(response => {
+        Axios.get(process.env.REACT_APP_ENDPOINT + '/api/users').then(response => {
             setUsers(response.data?.response || []);
         }).catch(error => {
             console.log("Axios Error : ", error);
@@ -28,7 +28,7 @@ const Users = () => {
             id: data.id,
             name: data.name,
         }
-        Axios.post('http://localhost:3001/api/create-user', payload).then(() => {
+        Axios.post(process.env.REACT_APP_ENDPOINT + '/api/create-user', payload).then(() => {
             getUsers();
             setSubmitted(false);
         }).catch(error => {
@@ -43,7 +43,7 @@ const Users = () => {
             id: data.id,
             name: data.name,
         }
-        Axios.post('http://localhost:3001/api/update-user', payload).then(() => {
+        Axios.post(process.env.REACT_APP_ENDPOINT + '/api/update-user', payload).then(() => {
             getUsers();
             setSubmitted(false);
         }).catch(error => {
@@ -52,7 +52,7 @@ const Users = () => {
     }
 
     const deleteUser = (data) => {
-        Axios.post('http://localhost:3001/api/delete-user', data).then(() => {
+        Axios.post(process.env.REACT_APP_ENDPOINT + '/api/delete-user', data).then(() => {
             getUsers();
         }).catch(error => {
             console.log("Axios Error : ", error);
